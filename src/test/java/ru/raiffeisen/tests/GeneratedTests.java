@@ -21,7 +21,7 @@ public class GeneratedTests extends TestBase {
             open("https://www.raiffeisen.ru/");
         });
 
-        step("Проверка, что есть надпись \"Откройте счет для бизнеса без посещения банка\"", () -> {
+        step("Проверка, что есть надпись \"Для ипотечных клиентов\"", () -> {
             $(".main-menu__link", 1).click();
             $(byText("Памятки для ипотечных клиентов")).click();
             $(".e-title--h2", 0).shouldHave(text("Для ипотечных клиентов"));
