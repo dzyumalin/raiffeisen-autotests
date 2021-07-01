@@ -48,7 +48,7 @@ public class MortgageLoans extends TestBase {
 
     @Test
     @Description("Вкладка 'Ипотека'")
-    @DisplayName("Проверка надписи на сайте")
+    @DisplayName("Проверка расчета ипотеки")
     void checkMortgageStateProgram() {
         step("Открыть https://www.raiffeisen.ru/", () -> {
             open("https://www.raiffeisen.ru/");
