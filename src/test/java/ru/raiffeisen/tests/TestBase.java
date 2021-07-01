@@ -1,5 +1,6 @@
 package ru.raiffeisen.tests;
 
+import com.codeborne.selenide.Configuration;
 import ru.raiffeisen.config.Project;
 import ru.raiffeisen.helpers.AllureAttachments;
 import ru.raiffeisen.helpers.DriverSettings;
@@ -19,6 +20,7 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
+        Configuration.startMaximized = true;
     }
 
     @AfterEach
