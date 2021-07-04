@@ -16,7 +16,7 @@ public class MortgageContent extends TestBase {
     MortgagePage mortgagePage = new MortgagePage();
 
     @Test
-    @Description("Вкладка 'Ипотека'")
+    @Description("Список 'Ипотека'")
     @DisplayName("Проверка надписи на сайте")
     void checkForMortgageClients() {
         step("Открыть https://www.raiffeisen.ru/", () -> {

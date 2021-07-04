@@ -16,7 +16,7 @@ public class MortgageLoansContent extends TestBase {
     MortgagePage mortgagePage = new MortgagePage();
 
     @Test
-    @Description("Вкладка 'Ипотека'")
+    @Description("Список 'Ипотека'")
     @DisplayName("Проверка надписи на сайте")
     void checkMortgageProgram() {
         step("Открыть https://www.raiffeisen.ru/", () -> {
@@ -31,14 +31,14 @@ public class MortgageLoansContent extends TestBase {
     }
 
     @Test
-    @Description("Вкладка 'Ипотека'")
+    @Description("Список 'Ипотека'")
     @DisplayName("Проверка расчета ипотеки")
     void checkMortgageStateProgram() {
         step("Открыть https://www.raiffeisen.ru/", () -> {
             open(OPEN_URL);
         });
 
-        step("Перейти до вкладки 'Ипотека с господдержкой'", () -> {
+        step("Перейти до списка 'Ипотека с господдержкой'", () -> {
             mortgagePage.setMortGageMenu();
             mortgagePage.setMortGageGovernmentSupport();
         });
