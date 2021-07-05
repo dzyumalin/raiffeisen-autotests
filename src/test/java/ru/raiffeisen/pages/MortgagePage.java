@@ -13,6 +13,7 @@ public class MortgagePage {
     private SelenideElement mortGageMenu = $(".main-menu__link", 1),
                             mortGageMemo = $(byText("Памятки для ипотечных клиентов")),
                             mortGagePrograms = $(".e-title--h2", 0),
+                            mortGageClients = $(".e-title--h2", 0),
                             mortGageAllPrograms = $(byText("Все программы")),
                             mortGageGovernmentSupport = $(byText("Ипотека с господдержкой")),
                             monthlyPayment = $(".fYZyZu");
@@ -43,6 +44,10 @@ public class MortgagePage {
     }
 
     public void checkMortGagePrograms() {
+        mortGagePrograms.shouldHave(text(MORTGAGE_PROGRAMS));
+    }
+
+    public void checkMortGageClients() {
         mortGagePrograms.shouldHave(text(MORTGAGE_CLIENTS));
     }
 

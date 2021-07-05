@@ -23,10 +23,10 @@ public class MortgageContent extends TestBase {
             open(OPEN_URL);
         });
 
-        step("Проверка, что есть надпись \"Для ипотечных клиентов\"", () -> {
+        step("Проверка, что есть надпись \"Ипотечные программы\"", () -> {
             mortgagePage.setMortGageMenu();
             mortgagePage.setMortGageMemo();
-            mortgagePage.checkMortGagePrograms();
+            mortgagePage.checkMortGageClients();
         });
     }
 
