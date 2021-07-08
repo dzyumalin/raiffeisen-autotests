@@ -25,7 +25,7 @@ public class DepositContent extends TestBase {
     @DisplayName("Тест на скачивание и проверку PDF файла")
     void checkPdfContent() {
 
-        step("Открыть https://www.raiffeisen.ru/", () -> {
+        step("Открыть " + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 

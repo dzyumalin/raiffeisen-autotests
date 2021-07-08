@@ -12,6 +12,7 @@ public class TestData {
             MORTGAGE_PROGRAMS = "Ипотечные программы",
             MORTGAGE_CLIENTS = "Для ипотечных клиентов",
 
+
             // Contibutions //
             MIN_DEPOSIT_AMOUNT = "50 000",
             DEPOSIT = "Вклад";
