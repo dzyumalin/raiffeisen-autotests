@@ -1,6 +1,6 @@
 ## Автотесты на страницу: https://www.raiffeisen.ru/
 # Технологии и инструменты используемые в тестах
-<p><a href="IDEA.svg"></a></p>
+![IDEA](https://github.com/dzyumalin/raiffeisen-autotests/raw/main/images/IDEA.svg)![GITHUB](https://github.com/dzyumalin/raiffeisen-autotests/raw/main/images/GITHUB.svg)![JAVA](https://github.com/dzyumalin/raiffeisen-autotests/raw/main/images/JAVA.svg)
 ### Параметры с помощью которых можно [запустить тесты](https://jenkins.autotests.cloud/job/raiffeisen-dmitryhli/build?delay=0sec):
 ![parameters](https://user-images.githubusercontent.com/48554235/124589772-0875d280-de63-11eb-9fcd-87a38b8a04f9.png)
 * browser (default chrome)
