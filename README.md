@@ -1,6 +1,13 @@
 ## Автотесты на страницу: https://www.raiffeisen.ru/
 # Технологии и инструменты используемые в тестах
-![IDEA](https://github.com/dzyumalin/raiffeisen-autotests/raw/main/images/IDEA.svg)![GITHUB](https://github.com/dzyumalin/raiffeisen-autotests/raw/main/images/GITHUB.svg)![JAVA](https://github.com/dzyumalin/raiffeisen-autotests/raw/main/images/JAVA.svg)
+
+ <img src="images/IDEA.svg" width="40" height="40">  <img src="images/GitHub.svg" width="40" height="40">
+ <img src="images/JAVA.svg" width="40" height="40">  <img src="images/Gradle.svg" width="40" height="40">
+ <img src="images/Junit5.svg" width="40" height="40">  <img src="images/Selenide.svg" width="40" height="40"> 
+ <img src="images/Jenkins.svg" width="40" height="40">  <img src="images/Selenoid.svg" width="40" height="40">
+ <img src="images/Allure Report.svg" width="40" height="40"> <img src="images/Allure TestOps.svg" width="40" height="40"> 
+ <img src="images/Telegram.svg" width="40" height="40">
+ 
 ### Параметры с помощью которых можно [запустить тесты](https://jenkins.autotests.cloud/job/raiffeisen-dmitryhli/build?delay=0sec):
 ![parameters](https://user-images.githubusercontent.com/48554235/124589772-0875d280-de63-11eb-9fcd-87a38b8a04f9.png)
 * browser (default chrome)
