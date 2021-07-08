@@ -22,7 +22,7 @@ public class MortgageLoansContent extends TestBase {
             open(OPEN_URL);
         });
 
-        step("Проверка, что есть надпись " + MORTGAGE_PROGRAMS, () -> {
+        step("Проверить надпись 'Ипотечные программы'", () -> {
             mortgagePage.setMortGageMenu();
             mortgagePage.setMortGageAllPrograms();
             mortgagePage.checkMortGagePrograms();
@@ -37,7 +37,7 @@ public class MortgageLoansContent extends TestBase {
             open(OPEN_URL);
         });
 
-        step("Перейти до списка 'Ипотека с господдержкой'", () -> {
+        step("Нажать на 'Ипотека с господдержкой'", () -> {
             mortgagePage.setMortGageMenu();
             mortgagePage.setMortGageGovernmentSupport();
         });
@@ -47,7 +47,7 @@ public class MortgageLoansContent extends TestBase {
         step("Расчет ипотеки", () -> {
             mortgagePage.setMortGageCalculator();
         });
-        step("Проверяем ежемесячный платеж", () -> {
+        step("Проверить ежемесячный платеж", () -> {
             mortgagePage.checkMonthlyPayment();
         });
     }

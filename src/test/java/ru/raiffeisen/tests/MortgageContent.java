@@ -23,7 +23,7 @@ public class MortgageContent extends TestBase {
             open(OPEN_URL);
         });
 
-        step("Проверка, что есть надпись " + MORTGAGE_CLIENTS, () -> {
+        step("Проверить надпись " + MORTGAGE_CLIENTS, () -> {
             mortgagePage.setMortGageMenu();
             mortgagePage.setMortGageMemo();
             mortgagePage.checkMortGageClients();

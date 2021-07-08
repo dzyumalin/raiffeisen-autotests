@@ -29,8 +29,11 @@ public class DepositContent extends TestBase {
             open(OPEN_URL);
         });
 
-        step("Перейти по списку 'Вклад'", () -> {
+        step("Нажать в меню на 'Вклады'", () -> {
             $(".main-menu__link", 3).click();
+        });
+
+        step("Нажать на 'Вклад'", () -> {
             $$(".menu-body").findBy(visible).$(byText(DEPOSIT)).click();
         });
 
