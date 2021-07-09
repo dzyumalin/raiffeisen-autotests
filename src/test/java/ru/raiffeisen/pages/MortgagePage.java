@@ -10,15 +10,17 @@ import static ru.raiffeisen.tests.TestData.*;
 
 public class MortgagePage {
 
+    // Selectors
     private SelenideElement mortGageMenu = $(".main-menu__link", 1),
                             mortGageMemo = $(byText("Памятки для ипотечных клиентов")),
-                            mortGagePrograms = $(".e-title--h2", 0),
-                            mortGageClients = $(".e-title--h2", 0),
+                            mortGagePrograms = $(".e-title--h2"),
+                            mortGageClients = $(".e-title--h2"),
                             mortGageAllPrograms = $(byText("Все программы")),
                             mortGageGovernmentSupport = $(byText("Ипотека с господдержкой")),
                             monthlyPayment = $(".fYZyZu");
 
 
+    // Methods
     public void setMortGageMenu() {
         mortGageMenu.click();
     }

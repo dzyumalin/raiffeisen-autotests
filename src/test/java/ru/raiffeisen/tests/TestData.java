@@ -6,9 +6,9 @@ public class TestData {
 
             // Mortgage //
             COST = "4500000", INTIAL_PAYMENT = "2000000",
-            MONTHLY_PAYMENT = "20 680",
-            RATE = "5.69 %",
-            CREDIT_AMOUNT = "2 500 000 ₽",
+            MONTHLY_PAYMENT = "21 764",
+            RATE = "6.49",
+            CREDIT_AMOUNT = "2 500 000",
             MORTGAGE_PROGRAMS = "Ипотечные программы",
             MORTGAGE_CLIENTS = "Для ипотечных клиентов",
 

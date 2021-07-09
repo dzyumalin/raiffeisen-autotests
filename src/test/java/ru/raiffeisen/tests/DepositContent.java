@@ -21,7 +21,7 @@ import static ru.raiffeisen.tests.TestData.*;
 public class DepositContent extends TestBase {
 
     @Test
-    @Description("Список 'Вклады'")
+    @Description("Меню 'Вклады'")
     @DisplayName("Тест на скачивание и проверку PDF файла")
     void checkPdfContent() {
 
