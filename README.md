@@ -32,11 +32,12 @@ gradle clean -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hu
 ```bash
 allure serve build/allure-results
 ```
-## Результат выполнения в [Allure Report](https://jenkins.autotests.cloud/job/raiffeisen-dmitryhli/17/allure/#suites)
+## Результат выполнения в [Allure Report](https://jenkins.autotests.cloud/job/raiffeisen-dmitryhli/18/allure/#suites)
 ![allure](https://user-images.githubusercontent.com/48554235/124589627-e2e8c900-de62-11eb-8c82-a7796dc03eb5.png)
 ## Результат выполнения в [Allure TestOps](https://allure.autotests.cloud/project/241/test-cases?treeId=0) 
 ![allure-testops](https://user-images.githubusercontent.com/48554235/124589735-fe53d400-de62-11eb-880c-77d141614af7.png)
 ## Оповещение о прохождении тестов в telegram
-![telegram](https://user-images.githubusercontent.com/48554235/124589747-03188800-de63-11eb-879b-d4c75d6592d5.png)
+![telegram](https://user-images.githubusercontent.com/48554235/125010508-54956280-e06f-11eb-8b87-c65262d4e800.png)
 ## Видео прохождение тестов из selenoid https://selenoid.autotests.cloud/#/
-![5ea9af587bbda6ed](https://user-images.githubusercontent.com/48554235/124590515-e4ff5780-de63-11eb-8f89-60602eb07df6.gif)
+![20fe4121f338fa7c](https://user-images.githubusercontent.com/48554235/125010873-12205580-e070-11eb-9585-6ee00cb2d2c3.gif)
+
