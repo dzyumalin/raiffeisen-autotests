@@ -18,9 +18,9 @@ public class MortgageCalculator {
         }
 
         public void setMortGageCalculator() {
-                $(byName("cost")).pressEnter().clear();
+                $(byName("cost")).click();
                 $(byName("cost")).val(COST);
-                $(byName("initialPayment")).pressEnter().clear();
+                $(byName("initialPayment")).click();
                 $(byName("initialPayment")).val(INTIAL_PAYMENT);
         }
 
