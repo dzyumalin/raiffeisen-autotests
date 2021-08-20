@@ -1,6 +1,7 @@
 package ru.raiffeisen.tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,54 +14,55 @@ import static ru.raiffeisen.tests.TestData.*;
 
 @Owner("Dmitriy")
 @Layer("Web")
+@Feature("Mortgage")
 public class MortgageLoansContent extends TestBase {
 
     MortgagePage mortgagePage = new MortgagePage();
 
     @Test
-    @Description("Меню 'Ипотека'")
-    @DisplayName("Проверка надписи на сайте")
+    @Description("Menu 'Mortgage'")
+    @DisplayName("Checking the description on the site")
     void checkMortgageProgram() {
-        step("Открыть " + OPEN_URL, () -> {
+        step("Open url " + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 
-        step("Нажать на 'Вклады'", () -> {
+        step("Click on 'Contributions'", () -> {
             mortgagePage.setMortGageMenu();
         });
 
         mortgagePage.setMortGageAllPrograms();
 
-        step("Проверить надпись 'Ипотечные программы'", () -> {
+        step("Check description 'Mortgage programs'", () -> {
             mortgagePage.checkMortGagePrograms();
         });
     }
 
     @Test
-    @Description("Меню 'Ипотека'")
-    @DisplayName("Проверка расчета ипотеки")
+    @Description("Menu 'Mortgage'")
+    @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {
-        step("Открыть " + OPEN_URL, () -> {
+        step("Open url " + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 
-        step("Нажать на 'Вклады'", () -> {
+        step("Click on 'Contributions'", () -> {
             mortgagePage.setMortGageMenu();
         });
 
-        step("Нажать на 'Ипотека с господдержкой'", () -> {
+        step("Click on 'Mortgage with state support'", () -> {
             mortgagePage.setMortGageGovernmentSupport();
         });
 
-        step("Выбрать элемент 'Ипотечный калькулятор'", () -> {
+        step("Click on 'Mortgage calculator'", () -> {
             mortgagePage.selectMortGageCalculator();
         });
 
-        step("Расчет ипотеки", () -> {
+        step("Mortgage calculation", () -> {
             mortgagePage.setMortGageCalculator();
         });
 
-        step("Проверить ежемесячный платеж", () -> {
+        step("Check monthly payment", () -> {
             mortgagePage.checkMonthlyPayment();
         });
     }

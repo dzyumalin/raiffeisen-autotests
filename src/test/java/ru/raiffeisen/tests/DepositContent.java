@@ -1,6 +1,7 @@
 package ru.raiffeisen.tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -22,30 +23,31 @@ import static ru.raiffeisen.tests.TestData.*;
 
 @Owner("Dmitriy")
 @Layer("Web")
+@Feature("Contributions")
 public class DepositContent extends TestBase {
 
     @Test
-    @Description("Меню 'Вклады'")
-    @DisplayName("Тест на скачивание и проверку PDF файла")
+    @Description("Menu 'Contributions'")
+    @DisplayName("Test on download and check PDF file")
     void checkPdfContent() {
 
-        step("Открыть " + OPEN_URL, () -> {
+        step("Open url" + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 
-        step("Нажать в меню на 'Вклады'", () -> {
+        step("Click in menu on 'Contributions'", () -> {
             $(".main-menu__link", 3).click();
         });
 
-        step("Нажать на 'Вклад'", () -> {
+        step("Click on 'Contributions'", () -> {
             $$(".menu-body").findBy(visible).$(byText(DEPOSIT)).click();
         });
 
-        step("Найти блок 'Документы'", () -> {
+        step("Find block 'Documents'", () -> {
             $(".tips__content").scrollTo().shouldHave(text("Документы"));
         });
 
-        step("Скачать документ 'Условия и процентные ставки по срочному вкладу «Фиксированный»' и проверить", () -> {
+        step("Download document 'Условия и процентные ставки по срочному вкладу «Фиксированный»' и проверить", () -> {
             URL url = new URL("https://www.raiffeisen.ru/common/img/uploaded/files/retail/deposits/fixed.pdf");
 
             InputStream is = url.openStream();
