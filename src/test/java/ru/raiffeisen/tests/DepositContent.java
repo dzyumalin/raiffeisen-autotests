@@ -1,10 +1,12 @@
 package ru.raiffeisen.tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.raiffeisen.annotations.Layer;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
@@ -18,6 +20,8 @@ import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static ru.raiffeisen.tests.TestData.*;
 
+@Owner("Dmitriy")
+@Layer("Web")
 public class DepositContent extends TestBase {
 
     @Test

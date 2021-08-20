@@ -1,8 +1,10 @@
 package ru.raiffeisen.tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.MortgagePage;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -10,7 +12,8 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 import static ru.raiffeisen.tests.TestData.*;
 
-
+@Owner("Dmitriy")
+@Layer("Web")
 public class MortgageContent extends TestBase {
 
     MortgagePage mortgagePage = new MortgagePage();
