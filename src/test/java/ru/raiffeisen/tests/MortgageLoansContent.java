@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.MortgagePage;
@@ -20,6 +21,7 @@ public class MortgageLoansContent extends TestBase {
     MortgagePage mortgagePage = new MortgagePage();
 
     @Test
+    @Tag("Web")
     @Description("Menu 'Mortgage'")
     @DisplayName("Checking the description on the site")
     void checkMortgageProgram() {
@@ -39,6 +41,7 @@ public class MortgageLoansContent extends TestBase {
     }
 
     @Test
+    @Tag("Web")
     @Description("Menu 'Mortgage'")
     @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {

@@ -6,6 +6,7 @@ import io.qameta.allure.Owner;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.raiffeisen.annotations.Layer;
 
@@ -27,6 +28,7 @@ import static ru.raiffeisen.tests.TestData.*;
 public class DepositContent extends TestBase {
 
     @Test
+    @Tag("Web")
     @Description("Menu 'Contributions'")
     @DisplayName("Test on download and check PDF file")
     void checkPdfContent() {
