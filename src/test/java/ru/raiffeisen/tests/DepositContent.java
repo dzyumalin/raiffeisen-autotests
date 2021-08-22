@@ -2,6 +2,7 @@ package ru.raiffeisen.tests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Lead;
 import io.qameta.allure.Owner;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -22,8 +23,8 @@ import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static ru.raiffeisen.tests.TestData.*;
 
-@Owner("Dmitriy")
 @Layer("Web")
+@Owner("Dmitriy")
 @Feature("Contributions")
 public class DepositContent extends TestBase {
 

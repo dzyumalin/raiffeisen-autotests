@@ -54,7 +54,7 @@ public class MortgageLoansContent extends TestBase {
         });
 
         step("Click on 'Mortgage with state support'", () -> {
-            mortgagePage.setMortGageGovernmentSupport();
+            mortgagePage.setMortGagemortGageNewBuilding();
         });
 
         step("Click on 'Mortgage calculator'", () -> {

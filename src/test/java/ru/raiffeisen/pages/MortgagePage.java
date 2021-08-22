@@ -16,7 +16,7 @@ public class MortgagePage {
                             mortGagePrograms = $(".e-title--h2"),
                             mortGageClients = $(".e-title--h2"),
                             mortGageAllPrograms = $(byText("Все программы")),
-                            mortGageGovernmentSupport = $(byText("Ипотека с господдержкой")),
+                            mortGageNewBuilding = $(byText("Новостройка")),
                             monthlyPayment = $(".fYZyZu");
 
 
@@ -33,8 +33,8 @@ public class MortgagePage {
         mortGageAllPrograms.click();
     }
 
-    public void setMortGageGovernmentSupport() {
-        mortGageGovernmentSupport.click();
+    public void setMortGagemortGageNewBuilding() {
+        mortGageNewBuilding.click();
     }
 
     public void selectMortGageCalculator() {
