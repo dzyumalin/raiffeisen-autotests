@@ -1,4 +1,4 @@
-package ru.raiffeisen.tests;
+package ru.raiffeisen.tests.ui;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.MortgagePage;
+import ru.raiffeisen.tests.TestBase;
 
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
