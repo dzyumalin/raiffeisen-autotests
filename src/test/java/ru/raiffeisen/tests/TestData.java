@@ -15,5 +15,6 @@ public class TestData {
 
             // Contibutions //
             MIN_DEPOSIT_AMOUNT = "50 000",
-            DEPOSIT = "Вклад";
+            DEPOSIT = "Вклад",
+            CONTRIBUTION_DOCUMENT = "Документы";
 }
