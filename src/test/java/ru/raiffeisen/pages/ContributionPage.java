@@ -17,8 +17,7 @@ import static ru.raiffeisen.tests.TestData.DEPOSIT;
 public class ContributionPage {
 
     private SelenideElement contributionMenu = $(".main-menu__link", 3),
-                            contribution = $$(".menu-body").findBy(visible).$(byText(DEPOSIT)),
-                            contributionDocument = $(".tips__content").scrollTo();
+                            contribution = $$(".menu-body").findBy(visible).$(byText(DEPOSIT));
 
     public void clickOnContributionMenu() {
         contributionMenu.click();
@@ -29,7 +28,7 @@ public class ContributionPage {
     }
 
     public void checkContributionDocument() {
-        contributionDocument.shouldHave(text(CONTRIBUTION_DOCUMENT));
+        new ContributionDownloadFile().checkContributionDocument();
     }
 
     public void selectContributionDownloadFile() throws IOException {

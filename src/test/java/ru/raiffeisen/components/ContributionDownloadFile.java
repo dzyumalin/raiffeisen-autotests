@@ -8,11 +8,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static ru.raiffeisen.tests.TestData.CONTRIBUTION_DOCUMENT;
 import static ru.raiffeisen.tests.TestData.MIN_DEPOSIT_AMOUNT;
 
 public class ContributionDownloadFile {
+
+    public void checkContributionDocument() {
+        $(".tips__content").scrollTo().shouldHave(text(CONTRIBUTION_DOCUMENT));
+    }
 
     public void downloadContributionDocument() throws IOException {
         URL url = new URL("https://www.raiffeisen.ru/common/img/uploaded/files/retail/deposits/fixed.pdf");
