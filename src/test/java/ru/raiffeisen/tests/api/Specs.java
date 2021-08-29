@@ -18,4 +18,12 @@ public class Specs {
     public static ResponseSpecification responseSpec = new ResponseSpecBuilder()
             .expectStatusCode(200)
             .build();
+
+    public static ResponseSpecification createResponseSpec = new ResponseSpecBuilder()
+            .expectStatusCode(201)
+            .build();
+
+    public static ResponseSpecification errorResponseSpec = new ResponseSpecBuilder()
+            .expectStatusCode(400)
+            .build();
 }

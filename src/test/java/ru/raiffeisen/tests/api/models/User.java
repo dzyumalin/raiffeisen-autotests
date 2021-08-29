@@ -8,11 +8,16 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
-    private Integer id;
-    private Integer year;
-    private String name;
-    private char color;
+    private Integer id,
+            year;
+    private String name,
+            job,
+            email,
+            avatar,
+            token,
+            error;
     @JsonProperty("pantone_value")
     private String pantoneValue;
+    private char color;
 
 }
