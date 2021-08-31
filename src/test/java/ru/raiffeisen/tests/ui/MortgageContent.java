@@ -26,16 +26,18 @@ public class MortgageContent extends TestBase {
 
     @Test
     @Tag("Web")
-    @Description("Menu 'Mortgage'")
-    @DisplayName("Checking the description on the site")
+    @Description("Menu 'Ипотека'")
+    @DisplayName("Checking mortage description on the site")
     void checkForMortgageClients() {
         step("Open url " + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 
+        step("Click on 'Ипотека'", () ->
+            mortgagePage.setMortGageMenu());
+        step("Click on " + MORTGAGE_CLIENTS, () ->
+            mortgagePage.setMortGageMemo());
         step("Check description " + MORTGAGE_CLIENTS, () -> {
-            mortgagePage.setMortGageMenu();
-            mortgagePage.setMortGageMemo();
             mortgagePage.checkMortGageClients();
         });
     }

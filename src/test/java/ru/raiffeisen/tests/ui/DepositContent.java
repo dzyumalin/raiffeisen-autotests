@@ -23,22 +23,22 @@ public class DepositContent extends TestBase {
 
     @Test
     @Tag("Web")
-    @Description("Menu 'Contributions'")
+    @Description("Menu 'Вклады'")
     @DisplayName("Test on download and check PDF file")
     void checkPdfContent() {
         step("Open url " + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 
-        step("Click in menu on 'Contributions'", () -> {
+        step("Click in menu on 'Вклады'", () -> {
             contributionPage.clickOnContributionMenu();
         });
 
-        step("Click on 'Contributions'", () -> {
+        step("Click on 'Вклад'", () -> {
             contributionPage.clickOnContribution();
         });
 
-        step("Find block 'Documents'", () ->
+        step("Find block 'Документы'", () ->
                 contributionPage.checkContributionDocument());
         step("Download document 'Условия и процентные ставки по срочному вкладу «Фиксированный»' и проверить", () -> {
             contributionPage.selectContributionDownloadFile();

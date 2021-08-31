@@ -24,48 +24,38 @@ public class MortgageLoansContent extends TestBase {
     @Test
     @Tag("Web")
     @Description("Menu 'Mortgage'")
-    @DisplayName("Checking the description on the site")
+    @DisplayName("Checking mortage description on the site")
     void checkMortgageProgram() {
         step("Open url " + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 
-        step("Click on 'Contributions'", () -> {
-            mortgagePage.setMortGageMenu();
-        });
-
-        mortgagePage.setMortGageAllPrograms();
-
-        step("Check description 'Mortgage programs'", () -> {
+        step("Click on 'Ипотека'", () ->
+            mortgagePage.setMortGageMenu());
+        step("Click on 'Все программы'", () ->
+            mortgagePage.setMortGageAllPrograms());
+        step("Check description " + MORTGAGE_PROGRAMS, () -> {
             mortgagePage.checkMortGagePrograms();
         });
     }
 
     @Test
     @Tag("Web")
-    @Description("Menu 'Mortgage'")
+    @Description("Menu 'Ипотека'")
     @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {
         step("Open url " + OPEN_URL, () -> {
             open(OPEN_URL);
         });
 
-        step("Click on 'Contributions'", () -> {
-            mortgagePage.setMortGageMenu();
-        });
-
-        step("Click on 'Mortgage with state support'", () -> {
-            mortgagePage.setMortGagemortGageNewBuilding();
-        });
-
-        step("Click on 'Mortgage calculator'", () -> {
-            mortgagePage.selectMortGageCalculator();
-        });
-
-        step("Mortgage calculation", () -> {
-            mortgagePage.setMortGageCalculator();
-        });
-
+        step("Click on 'Ипотека'", () ->
+            mortgagePage.setMortGageMenu());
+        step("Click on 'Новостройка'", () ->
+            mortgagePage.setMortGagemortGageNewBuilding());
+        step("Click on 'Ипотечный калькулятор'", () ->
+            mortgagePage.selectMortGageCalculator());
+        step("Mortgage calculation", () ->
+            mortgagePage.setMortGageCalculator());
         step("Check monthly payment", () -> {
             mortgagePage.checkMonthlyPayment();
         });
