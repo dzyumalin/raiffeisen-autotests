@@ -1,17 +1,21 @@
 package ru.raiffeisen.tests.ui;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import ru.raiffeisen.annotations.JiraIssue;
+import ru.raiffeisen.annotations.JiraIssues;
 import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.MortgagePage;
 import ru.raiffeisen.tests.TestBase;
 
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.raiffeisen.tests.TestData.*;
 
 @Owner("Dmitriy")
@@ -23,6 +27,7 @@ public class MortgageLoansContent extends TestBase {
 
     @Test
     @Tag("Web")
+    @JiraIssues({@JiraIssue("HOMEWORK-8")})
     @Description("Menu 'Mortgage'")
     @DisplayName("Checking mortage description on the site")
     void checkMortgageProgram() {
@@ -41,11 +46,12 @@ public class MortgageLoansContent extends TestBase {
 
     @Test
     @Tag("Web")
+    @JiraIssues({@JiraIssue("HOMEWORK-8")})
     @Description("Menu 'Ипотека'")
     @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {
         step("Open url " + OPEN_URL, () -> {
-            open(OPEN_URL);
+            mortgagePage.checkAndOpenUrl();
         });
 
         step("Click on 'Ипотека'", () ->

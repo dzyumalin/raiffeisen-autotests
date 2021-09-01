@@ -6,6 +6,8 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import ru.raiffeisen.annotations.JiraIssue;
+import ru.raiffeisen.annotations.JiraIssues;
 import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.tests.api.models.CreateUser;
 import ru.raiffeisen.tests.api.models.User;
@@ -23,6 +25,7 @@ public class ReqresinTests {
 
     @Test
     @Tag("Api")
+    @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Get and check list user data")
     public void listResource() {
@@ -37,6 +40,7 @@ public class ReqresinTests {
 
     @Test
     @Tag("Api")
+    @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Get and check year at user data")
     public void listResourceYear() {
@@ -52,6 +56,7 @@ public class ReqresinTests {
 
     @Test
     @Tag("Api")
+    @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Get and check single user data")
     public void singleResource() {
@@ -70,6 +75,7 @@ public class ReqresinTests {
 
     @Test
     @Tag("Api")
+    @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Create user")
     public void createUser() {
@@ -91,6 +97,7 @@ public class ReqresinTests {
 
     @Test
     @Tag("Api")
+    @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Update user")
     public void updateUser() {
@@ -112,6 +119,7 @@ public class ReqresinTests {
 
     @Test
     @Tag("Api")
+    @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Authorization")
     public void loginSuccessful() {
@@ -132,6 +140,7 @@ public class ReqresinTests {
 
     @Test
     @Tag("Api")
+    @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Authorization error")
     public void loginUnSuccessful() {

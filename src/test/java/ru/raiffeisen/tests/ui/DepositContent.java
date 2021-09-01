@@ -1,5 +1,6 @@
 package ru.raiffeisen.tests.ui;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;

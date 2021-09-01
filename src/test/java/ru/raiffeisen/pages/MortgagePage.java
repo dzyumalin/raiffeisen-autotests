@@ -1,11 +1,14 @@
 package ru.raiffeisen.pages;
 
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 import ru.raiffeisen.components.MortgageCalculator;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.raiffeisen.tests.TestData.*;
 
 public class MortgagePage {
@@ -57,5 +60,12 @@ public class MortgagePage {
         monthlyPayment.shouldHave(text(MONTHLY_PAYMENT), text(RATE), text(CREDIT_AMOUNT));
     }
 
+    public void checkAndOpenUrl() {
+        String url = OPEN_URL;
+        open(url);
+        String currentUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
+
+        assertEquals(url, currentUrl);
+    }
 
 }
