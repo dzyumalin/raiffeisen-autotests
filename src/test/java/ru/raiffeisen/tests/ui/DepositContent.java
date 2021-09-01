@@ -6,6 +6,8 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import ru.raiffeisen.annotations.JiraIssue;
+import ru.raiffeisen.annotations.JiraIssues;
 import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.ContributionPage;
 import ru.raiffeisen.tests.TestBase;
@@ -23,6 +25,7 @@ public class DepositContent extends TestBase {
 
     @Test
     @Tag("Web")
+    @JiraIssues({@JiraIssue("HOMEWORK-7")})
     @Description("Menu 'Вклады'")
     @DisplayName("Test on download and check PDF file")
     void checkPdfContent() {
