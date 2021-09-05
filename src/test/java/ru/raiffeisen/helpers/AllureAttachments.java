@@ -1,56 +1,57 @@
 package ru.raiffeisen.helpers;
 
-import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import ru.raiffeisen.config.Project;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class AllureAttachments {
 
-    @Attachment(value = "{attachName}", type = "text/plain")
-    private static String addMessage(String attachName, String text) {
-        return text;
-    }
-
-    public static void addBrowserConsoleLogs() {
-        addMessage("Browser console logs", DriverUtils.getConsoleLogs());
-    }
-
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] addScreenshotAs(String attachName) {
-        return DriverUtils.getScreenshotAsBytes();
+        return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
     @Attachment(value = "Page source", type = "text/html")
     public static byte[] addPageSource() {
-        return DriverUtils.getPageSourceAsBytes();
+        return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
     }
 
-    public static void addVideo(String sessionId) {
-        URL videoUrl = DriverUtils.getVideoUrl(sessionId);
-        if (videoUrl != null) {
-            InputStream videoInputStream = null;
-            sleep(1000);
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    public static String attachVideo(String sessionId, String url) {
+        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
+                + url
+                + "' type='video/mp4'></video></body></html>";
+    }
 
-            for (int i = 0; i < 10; i++) {
-                try {
-                    videoInputStream = videoUrl.openStream();
-                    break;
-                } catch (FileNotFoundException e) {
-                    sleep(1000);
-                } catch (IOException e) {
-                    Logging.LOGGER.warn("[ALLURE VIDEO ATTACHMENT ERROR] Cant attach allure video, {}", videoUrl);
-                    e.printStackTrace();
-                }
-            }
-            Allure.addAttachment("Video", "video/mp4", videoInputStream, "mp4");
+    public static void addAttachments(String driver) {
+        String sessionId;
+        switch(driver) {
+            case "SelenoidDriver":
+                sessionId = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+                addScreenshotAs("Last screenshot");
+                addPageSource();
+                closeWebDriver();
+                attachVideo(sessionId, Project.deviceConfig.selenoidVideoStorage() + sessionId + ".mp4");
+                break;
+            case "BrowserstackMobileDriver":
+                sessionId = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+                addScreenshotAs("Last screenshot");
+                addPageSource();
+                closeWebDriver();
+                attachVideo(sessionId, BrowserstackApi.getVideoUrl(sessionId));
+                break;
+            default:
+                addScreenshotAs("Last screenshot");
+                AllureAttachments.addPageSource();
+                closeWebDriver();
+                break;
         }
     }
-
-
 }

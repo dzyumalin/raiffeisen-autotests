@@ -1,6 +1,5 @@
 package ru.raiffeisen.tests.ui;
 
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -15,18 +14,17 @@ import ru.raiffeisen.tests.TestBase;
 
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.raiffeisen.tests.TestData.*;
 
 @Owner("Dmitriy")
-@Layer("Web")
+@Layer("web")
 @Feature("Mortgage")
 public class MortgageLoansContent extends TestBase {
 
     MortgagePage mortgagePage = new MortgagePage();
 
     @Test
-    @Tag("Web")
+    @Tag("web")
     @JiraIssues({@JiraIssue("HOMEWORK-8")})
     @Description("Menu 'Mortgage'")
     @DisplayName("Checking mortage description on the site")

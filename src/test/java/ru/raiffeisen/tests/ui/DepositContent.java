@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static ru.raiffeisen.tests.TestData.*;
 
-@Layer("Web")
+@Layer("web")
 @Owner("Dmitriy")
 @Feature("Contributions")
 public class DepositContent extends TestBase {
@@ -25,7 +25,7 @@ public class DepositContent extends TestBase {
      ContributionPage contributionPage = new ContributionPage();
 
     @Test
-    @Tag("Web")
+    @Tag("web")
     @JiraIssues({@JiraIssue("HOMEWORK-7")})
     @Description("Menu 'Вклады'")
     @DisplayName("Test on download and check PDF file")

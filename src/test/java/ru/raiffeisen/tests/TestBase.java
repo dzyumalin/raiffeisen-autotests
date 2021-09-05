@@ -2,40 +2,35 @@ package ru.raiffeisen.tests;
 
 import com.codeborne.selenide.Configuration;
 import ru.raiffeisen.config.Project;
+import ru.raiffeisen.drivers.SelenoidDriver;
 import ru.raiffeisen.helpers.AllureAttachments;
-import ru.raiffeisen.helpers.DriverSettings;
-import ru.raiffeisen.helpers.DriverUtils;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.extension.ExtendWith;
 
+import java.util.Objects;
 
-@ExtendWith({AllureJunit5.class})
 public class TestBase {
+
     @BeforeAll
-    static void setUp() {
+    public static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        DriverSettings.configure();
-        Configuration.startMaximized = true;
+        if (Objects.equals(Project.deviceConfig.driver(), "SelenoidDriver")) {
+            SelenoidDriver.configure();
+            System.out.println(Project.deviceConfig.hubUrl());
+        } else {
+            Configuration.browser = "ru.raiffeisen.drivers." + Project.deviceConfig.driver();
+            Configuration.startMaximized = false;
+            Configuration.browserSize = null;
+            Configuration.timeout = 10000;
+        }
+
     }
 
     @AfterEach
-    public void addAttachments() {
-        String sessionId = DriverUtils.getSessionId();
-
-        AllureAttachments.addScreenshotAs("Last screenshot");
-        AllureAttachments.addPageSource();
-//        AllureAttachments.attachNetwork(); // todo
-        AllureAttachments.addBrowserConsoleLogs();
-
-        Selenide.closeWebDriver();
-
-        if (Project.isVideoOn()) {
-            AllureAttachments.addVideo(sessionId);
-        }
+    public void allureAttachments() {
+        AllureAttachments.addAttachments(Project.deviceConfig.driver());
+        Configuration.browser = "ru.raiffeisen.drivers." + Project.deviceConfig.driver();
     }
 }

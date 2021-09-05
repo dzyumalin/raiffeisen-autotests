@@ -6,13 +6,13 @@ plugins {
 
 repositories {
     mavenCentral()
-            maven {url "https://plugins.gradle.org/m2/"}
+    maven {url "https://plugins.gradle.org/m2/"}
 }
 
-def allureVersion = "2.13.9",
-    selenideVersion = "5.20.1",
+def allureVersion = '2.14.0',
+    selenideVersion = '5.24.0',
     junitVersion = "5.7.2",
-    restAssured = "4.3.1"
+    restAssured = '4.4.0'
 
 allure {
     version = allureVersion
@@ -28,17 +28,18 @@ apply plugin: "io.qameta.allure"
 dependencies {
     testImplementation(
             "io.rest-assured:rest-assured:$restAssured",
-            "org.aspectj:aspectjweaver:1.9.6",
+            'org.aspectj:aspectjweaver:1.9.7',
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.aeonbits.owner:owner:1.0.12",
-            "org.assertj:assertj-core:3.19.0",
+            'org.assertj:assertj-core:3.20.2',
+            'io.appium:java-client:7.3.0',
             "org.hamcrest:hamcrest-all:1.3",
-            "com.fasterxml.jackson.core:jackson-databind:2.11.2",
-            "com.codeborne:pdf-test:1.5.1",
+            'com.fasterxml.jackson.core:jackson-databind:2.12.5',
+            'com.codeborne:pdf-test:1.5.1',
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntimeOnly (
-            "org.slf4j:slf4j-simple:1.7.29",
+            'org.slf4j:slf4j-simple:1.7.32',
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
@@ -49,20 +50,10 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
+    if (System.getProperty("deviceHost") == null)
+        System.setProperty("deviceHost", "selenoid")
     systemProperties(System.getProperties())
     useJUnitPlatform()
-      systemProperty "selenide.fastSetValue", "true"
-//    systemProperty "chromeoptions.prefs", "intl.accept_languages=en"
-
-    if (System.getProperty("threads") != null) {
-        systemProperties += [
-                'junit.jupiter.execution.parallel.enabled'                 : true,
-                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
-                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
-                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
-        ]
-    }
 
     testLogging {
         lifecycle {
@@ -70,5 +61,23 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task web(type: Test) {
+    useJUnitPlatform {
+        includeTags 'web'
+    }
+}
+
+task api(type: Test) {
+    useJUnitPlatform {
+        includeTags 'api'
+    }
+}
+
+task mobile(type: Test) {
+    useJUnitPlatform {
+        includeTags 'mobile'
     }
 }

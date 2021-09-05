@@ -24,7 +24,7 @@ import static ru.raiffeisen.tests.api.Specs.*;
 public class ReqresinTests {
 
     @Test
-    @Tag("Api")
+    @Tag("api")
     @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Get and check list user data")
@@ -39,7 +39,7 @@ public class ReqresinTests {
     }
 
     @Test
-    @Tag("Api")
+    @Tag("api")
     @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Get and check year at user data")
@@ -55,7 +55,7 @@ public class ReqresinTests {
     }
 
     @Test
-    @Tag("Api")
+    @Tag("api")
     @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Get and check single user data")
@@ -74,7 +74,7 @@ public class ReqresinTests {
     }
 
     @Test
-    @Tag("Api")
+    @Tag("api")
     @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Create user")
@@ -96,7 +96,7 @@ public class ReqresinTests {
     }
 
     @Test
-    @Tag("Api")
+    @Tag("api")
     @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Update user")
@@ -118,7 +118,7 @@ public class ReqresinTests {
     }
 
     @Test
-    @Tag("Api")
+    @Tag("api")
     @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Authorization")
@@ -139,7 +139,7 @@ public class ReqresinTests {
     }
 
     @Test
-    @Tag("Api")
+    @Tag("api")
     @JiraIssues({@JiraIssue("HOMEWORK-9")})
     @Description("Main page")
     @DisplayName("Authorization error")
