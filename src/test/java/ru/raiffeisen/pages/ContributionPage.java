@@ -2,7 +2,6 @@ package ru.raiffeisen.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import ru.raiffeisen.components.ContributionDownloadFile;
-import ru.raiffeisen.components.MortgageCalculator;
 
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ import static ru.raiffeisen.tests.TestData.DEPOSIT;
 public class ContributionPage {
 
     private SelenideElement contributionMenu = $(".main-menu__link", 3),
-                            contribution = $$(".menu-body").findBy(visible).$(byText(DEPOSIT));
+            contribution = $$(".menu-body").findBy(visible).$(byText(DEPOSIT));
 
     public void clickOnContributionMenu() {
         contributionMenu.click();

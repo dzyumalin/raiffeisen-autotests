@@ -15,12 +15,12 @@ public class MortgagePage {
 
     // Selectors
     private SelenideElement mortGageMenu = $(".main-menu__link", 1),
-                            mortGageMemo = $(byText("Памятки для ипотечных клиентов")),
-                            mortGagePrograms = $(".e-title--h2"),
-                            mortGageClients = $(".e-title--h2"),
-                            mortGageAllPrograms = $(byText("Все программы")),
-                            mortGageNewBuilding = $(byText("Новостройка")),
-                            monthlyPayment = $(".fYZyZu");
+            mortGageMemo = $(byText("Памятки для ипотечных клиентов")),
+            mortGagePrograms = $(".e-title--h2"),
+            mortGageClients = $(".e-title--h2"),
+            mortGageAllPrograms = $(byText("Все программы")),
+            mortGageNewBuilding = $(byText("Новостройка")),
+            monthlyPayment = $(".fYZyZu");
 
 
     // Methods
