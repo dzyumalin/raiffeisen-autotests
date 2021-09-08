@@ -12,6 +12,7 @@ import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.ContributionPage;
 import ru.raiffeisen.tests.TestBase;
 
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static ru.raiffeisen.tests.TestData.OPEN_URL;
 
@@ -29,7 +30,7 @@ public class DepositContent extends TestBase {
     @DisplayName("Test on download and check PDF file")
     void checkPdfContent() {
         step("Open url " + OPEN_URL, () ->
-                contributionPage.checkAndOpenUrl());
+                open(OPEN_URL));
 
         step("Click in menu on 'Вклады'", () ->
                 contributionPage.clickOnContributionMenu());
