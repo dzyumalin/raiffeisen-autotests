@@ -11,6 +11,8 @@ import org.junit.jupiter.api.BeforeAll;
 
 import java.util.Objects;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
 public class TestBase {
 
     @BeforeAll
@@ -31,6 +33,6 @@ public class TestBase {
     @AfterEach
     public void allureAttachments() {
         AllureAttachments.addAttachments(Project.deviceConfig.driver());
-        Configuration.browser = "ru.raiffeisen.drivers." + Project.deviceConfig.driver();
+        closeWebDriver();
     }
 }
