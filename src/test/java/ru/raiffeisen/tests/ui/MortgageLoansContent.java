@@ -45,7 +45,7 @@ public class MortgageLoansContent extends TestBase {
     @Test
     @Tag("Web")
     @JiraIssues({@JiraIssue("HOMEWORK-8")})
-    @Description("Menu 'Ипотека'")
+    @Description("Menu 'Mortgage'")
     @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {
         step("Open url " + OPEN_URL, () ->
