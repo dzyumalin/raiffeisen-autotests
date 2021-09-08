@@ -32,4 +32,8 @@ public class ContributionPage {
         new ContributionDownloadFile().downloadContributionDocument();
     }
 
+    public void checkAndOpenUrl() {
+        new MortgagePage().checkAndOpenUrl();
+    }
+
 }

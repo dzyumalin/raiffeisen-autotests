@@ -12,7 +12,6 @@ import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.MortgagePage;
 import ru.raiffeisen.tests.TestBase;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.title;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -32,9 +31,8 @@ public class MortgageContent extends TestBase {
     @Description("Menu 'Ипотека'")
     @DisplayName("Checking mortage description on the site")
     void checkForMortgageClients() {
-        step("Open url " + OPEN_URL, () -> {
-            open(OPEN_URL);
-        });
+        step("Open url " + OPEN_URL, () ->
+            mortgagePage.checkAndOpenUrl());
 
         step("Click on 'Ипотека'", () ->
             mortgagePage.setMortGageMenu());
@@ -52,7 +50,7 @@ public class MortgageContent extends TestBase {
     @DisplayName("Checking for the presence of a page title\n")
     void titleTest() {
         step("Open url " + OPEN_URL, () ->
-                open(OPEN_URL));
+                mortgagePage.checkAndOpenUrl());
         step("The page title should have 'Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги'", () -> {
             String expectedTitle = "Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги";
             String actualTitle = title();

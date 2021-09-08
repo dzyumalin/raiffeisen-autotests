@@ -12,7 +12,6 @@ import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.MortgagePage;
 import ru.raiffeisen.tests.TestBase;
 
-import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static ru.raiffeisen.tests.TestData.*;
 
@@ -29,9 +28,8 @@ public class MortgageLoansContent extends TestBase {
     @Description("Menu 'Mortgage'")
     @DisplayName("Checking mortage description on the site")
     void checkMortgageProgram() {
-        step("Open url " + OPEN_URL, () -> {
-            open(OPEN_URL);
-        });
+        step("Open url " + OPEN_URL, () ->
+            mortgagePage.checkAndOpenUrl());
 
         step("Click on 'Ипотека'", () ->
             mortgagePage.setMortGageMenu());
@@ -48,9 +46,8 @@ public class MortgageLoansContent extends TestBase {
     @Description("Menu 'Ипотека'")
     @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {
-        step("Open url " + OPEN_URL, () -> {
-            mortgagePage.checkAndOpenUrl();
-        });
+        step("Open url " + OPEN_URL, () ->
+            mortgagePage.checkAndOpenUrl());
 
         step("Click on 'Ипотека'", () ->
             mortgagePage.setMortGageMenu());
