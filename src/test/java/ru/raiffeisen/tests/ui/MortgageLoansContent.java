@@ -43,7 +43,7 @@ public class MortgageLoansContent extends TestBase {
     }
 
     @Test
-    @Tag("Web")
+    @Tag("web")
     @JiraIssues({@JiraIssue("HOMEWORK-8")})
     @Description("Menu 'Mortgage'")
     @DisplayName("Checking the calculation of the mortgage")
