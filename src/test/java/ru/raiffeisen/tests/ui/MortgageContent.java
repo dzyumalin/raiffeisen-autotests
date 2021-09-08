@@ -21,7 +21,7 @@ import static ru.raiffeisen.tests.TestData.OPEN_URL;
 @Layer("Web")
 @Owner("Dmitriy")
 @Feature("Mortgage")
-public class MortgageContent extends TestBase {
+public class MortgageContent {
 
     MortgagePage mortgagePage = new MortgagePage();
 
