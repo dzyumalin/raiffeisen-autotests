@@ -28,16 +28,15 @@ public class MortgageContent extends TestBase {
     @Test
     @Tag("web")
     @JiraIssues({@JiraIssue("HOMEWORK-8")})
-    @Description("Menu 'Ипотека'")
-    @DisplayName("Checking mortage description on the site")
+    @Description("Menu 'Mortgage'")
+    @DisplayName("Checking mortage content")
     void checkForMortgageClients() {
         step("Open url " + OPEN_URL, () ->
-            mortgagePage.checkAndOpenUrl());
-
+                mortgagePage.checkAndOpenUrl());
         step("Click on 'Ипотека'", () ->
-            mortgagePage.setMortGageMenu());
+                mortgagePage.setMortGageMenu());
         step("Click on " + MORTGAGE_CLIENTS, () ->
-            mortgagePage.setMortGageMemo());
+                mortgagePage.setMortGageMemo());
         step("Check description " + MORTGAGE_CLIENTS, () -> {
             mortgagePage.checkMortGageClients();
         });

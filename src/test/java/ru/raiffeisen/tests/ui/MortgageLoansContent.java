@@ -13,7 +13,8 @@ import ru.raiffeisen.pages.MortgagePage;
 import ru.raiffeisen.tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
-import static ru.raiffeisen.tests.TestData.*;
+import static ru.raiffeisen.tests.TestData.MORTGAGE_PROGRAMS;
+import static ru.raiffeisen.tests.TestData.OPEN_URL;
 
 @Owner("Dmitriy")
 @Layer("web")
@@ -29,12 +30,12 @@ public class MortgageLoansContent extends TestBase {
     @DisplayName("Checking mortage description on the site")
     void checkMortgageProgram() {
         step("Open url " + OPEN_URL, () ->
-            mortgagePage.checkAndOpenUrl());
+                mortgagePage.checkAndOpenUrl());
 
         step("Click on 'Ипотека'", () ->
-            mortgagePage.setMortGageMenu());
+                mortgagePage.setMortGageMenu());
         step("Click on 'Все программы'", () ->
-            mortgagePage.setMortGageAllPrograms());
+                mortgagePage.setMortGageAllPrograms());
         step("Check description " + MORTGAGE_PROGRAMS, () -> {
             mortgagePage.checkMortGagePrograms();
         });
@@ -47,16 +48,16 @@ public class MortgageLoansContent extends TestBase {
     @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {
         step("Open url " + OPEN_URL, () ->
-            mortgagePage.checkAndOpenUrl());
+                mortgagePage.checkAndOpenUrl());
 
         step("Click on 'Ипотека'", () ->
-            mortgagePage.setMortGageMenu());
+                mortgagePage.setMortGageMenu());
         step("Click on 'Новостройка'", () ->
-            mortgagePage.setMortGagemortGageNewBuilding());
+                mortgagePage.setMortGagemortGageNewBuilding());
         step("Click on 'Ипотечный калькулятор'", () ->
-            mortgagePage.selectMortGageCalculator());
+                mortgagePage.selectMortGageCalculator());
         step("Mortgage calculation", () ->
-            mortgagePage.setMortGageCalculator());
+                mortgagePage.setMortGageCalculator());
         step("Check monthly payment", () -> {
             mortgagePage.checkMonthlyPayment();
         });
