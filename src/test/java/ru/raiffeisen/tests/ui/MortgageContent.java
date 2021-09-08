@@ -22,7 +22,7 @@ import static ru.raiffeisen.tests.TestData.OPEN_URL;
 @Layer("Web")
 @Owner("Dmitriy")
 @Feature("Mortgage")
-public class MortgageContent {
+public class MortgageContent extends TestBase{
 
     MortgagePage mortgagePage = new MortgagePage();
 
@@ -33,7 +33,7 @@ public class MortgageContent {
     @DisplayName("Checking mortage content")
     void checkForMortgageClients() {
         step("Open url " + OPEN_URL, () ->
-                open(OPEN_URL));
+                mortgagePage.checkAndOpenUrl());
         step("Click on 'Ипотека'", () ->
                 mortgagePage.setMortGageMenu());
         step("Click on " + MORTGAGE_CLIENTS, () ->
@@ -50,7 +50,7 @@ public class MortgageContent {
     @DisplayName("Checking for the presence of a page title\n")
     void titleTest() {
         step("Open url " + OPEN_URL, () ->
-                open(OPEN_URL));
+                mortgagePage.checkAndOpenUrl());
         step("The page title should have 'Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги'", () -> {
             String expectedTitle = "Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги";
             String actualTitle = title();

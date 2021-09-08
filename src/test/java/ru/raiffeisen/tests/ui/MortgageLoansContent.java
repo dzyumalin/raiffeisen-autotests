@@ -31,7 +31,7 @@ public class MortgageLoansContent extends TestBase {
     @DisplayName("Checking mortage description on the site")
     void checkMortgageProgram() {
         step("Open url " + OPEN_URL, () ->
-                open(OPEN_URL));
+                mortgagePage.checkAndOpenUrl());
 
         step("Click on 'Ипотека'", () ->
                 mortgagePage.setMortGageMenu());

@@ -30,8 +30,7 @@ public class DepositContent extends TestBase {
     @DisplayName("Test on download and check PDF file")
     void checkPdfContent() {
         step("Open url " + OPEN_URL, () ->
-                open(OPEN_URL));
-
+                contributionPage.checkAndOpenUrl());
         step("Click in menu on 'Вклады'", () ->
                 contributionPage.clickOnContributionMenu());
 
