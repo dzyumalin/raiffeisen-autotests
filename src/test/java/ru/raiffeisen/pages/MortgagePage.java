@@ -4,6 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import ru.raiffeisen.components.MortgageCalculator;
 
+import java.util.Objects;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -61,11 +63,13 @@ public class MortgagePage {
     }
 
     public void checkAndOpenUrl() {
-        String url = OPEN_URL;
+        String url = OPEN_URL, subfolder = "https://www.raiffeisen.ru/new";
         open(url);
         String currentUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
 
-        assertEquals(url, currentUrl);
+        if (Objects.equals(currentUrl, subfolder)) {
+            open(url);
+        }
     }
 
 }
