@@ -19,9 +19,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static ru.raiffeisen.tests.TestData.MORTGAGE_CLIENTS;
 import static ru.raiffeisen.tests.TestData.OPEN_URL;
 
-@Layer("Web")
+@Layer("web")
 @Owner("Dmitriy")
-@Feature("Mortgage")
+@Feature("Ипотека")
 public class MortgageContent extends TestBase{
 
     MortgagePage mortgagePage = new MortgagePage();
@@ -29,7 +29,7 @@ public class MortgageContent extends TestBase{
     @Test
     @Tag("web")
     @JiraIssues({@JiraIssue("HOMEWORK-8")})
-    @Description("Menu 'Mortgage'")
+    @Description("Menu 'Ипотека'")
     @DisplayName("Checking mortage content")
     void checkForMortgageClients() {
         step("Open url " + OPEN_URL, () ->

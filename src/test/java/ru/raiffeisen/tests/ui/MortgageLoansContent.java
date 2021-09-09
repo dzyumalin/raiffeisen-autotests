@@ -19,7 +19,7 @@ import static ru.raiffeisen.tests.TestData.OPEN_URL;
 
 @Owner("Dmitriy")
 @Layer("web")
-@Feature("Mortgage")
+@Feature("Ипотека")
 public class MortgageLoansContent extends TestBase {
 
     MortgagePage mortgagePage = new MortgagePage();
@@ -27,7 +27,7 @@ public class MortgageLoansContent extends TestBase {
     @Test
     @Tag("web")
     @JiraIssues({@JiraIssue("HOMEWORK-8")})
-    @Description("Menu 'Mortgage'")
+    @Description("Menu 'Ипотека'")
     @DisplayName("Checking mortage description on the site")
     void checkMortgageProgram() {
         step("Open url " + OPEN_URL, () ->
@@ -45,7 +45,7 @@ public class MortgageLoansContent extends TestBase {
     @Test
     @Tag("web")
     @JiraIssues({@JiraIssue("HOMEWORK-8")})
-    @Description("Menu 'Mortgage'")
+    @Description("Menu 'Ипотека'")
     @DisplayName("Checking the calculation of the mortgage")
     void checkMortgageStateProgram() {
         step("Open url " + OPEN_URL, () ->

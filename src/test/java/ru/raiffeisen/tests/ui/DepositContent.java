@@ -18,7 +18,7 @@ import static ru.raiffeisen.tests.TestData.OPEN_URL;
 
 @Layer("web")
 @Owner("Dmitriy")
-@Feature("Contributions")
+@Feature("Вклады")
 public class DepositContent extends TestBase {
 
     ContributionPage contributionPage = new ContributionPage();

@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.raiffeisen.tests.api.Specs.*;
 
 @Owner("Dmitriy")
-@Layer("Api")
+@Layer("api")
 @Feature("Reqres")
 public class ReqresinTests {
 
