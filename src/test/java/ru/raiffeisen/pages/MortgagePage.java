@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ru.raiffeisen.tests.TestData.*;
 
 public class MortgagePage {
@@ -63,11 +62,11 @@ public class MortgagePage {
     }
 
     public void checkAndOpenUrl() {
-        String url = OPEN_URL, subfolder = "https://www.raiffeisen.ru/new";
+        String url = OPEN_URL;
         open(url);
         String currentUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
 
-        if (Objects.equals(currentUrl, subfolder)) {
+        if (!Objects.equals(currentUrl, url)) {
             open(url);
         }
     }
