@@ -12,7 +12,6 @@ import ru.raiffeisen.annotations.Layer;
 import ru.raiffeisen.pages.MortgagePage;
 import ru.raiffeisen.tests.TestBase;
 
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static ru.raiffeisen.tests.TestData.MORTGAGE_PROGRAMS;
 import static ru.raiffeisen.tests.TestData.OPEN_URL;
