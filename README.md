@@ -2,21 +2,15 @@
 ## UI - https://www.raiffeisen.ru/ <br> API - https://reqres.in/ <br> Mobile - <a href="https://play.google.com/store/apps/details?id=org.wikipedia&referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob">https://www.wikipedia.org/ </a>
 # Технологии и инструменты используемые в тестах
 
- <img src="images/JAVA.svg" width="40" height="40">
- <img src="images/Gradle.svg" width="40" height="40">
- <img src="images/browserstack.jpeg" width="40" height="40">
- <img src="images/Junit5.svg" width="40" height="40">
- <img src="images/Selenide.svg" width="40" height="40">
- <img src="images/Selenoid.svg" width="40" height="40">
- <img src="images/IDEA.svg" width="40" height="40">  
- <img src="images/GitHub.svg" width="40" height="40">
- <img src="images/Jenkins.svg" width="40" height="40">  
- <img src="images/Allure Report.svg" width="40" height="40"> 
- <img src="images/Allure TestOps.svg" width="40" height="40">
- <img src="images/Jira_icon.png" width="40" height="40">
+ <img src="images/JAVA.svg" width="40" height="40"> <img src="images/Gradle.svg" width="40" height="40">
+ <img src="images/browserstack.jpeg" width="40" height="40"> <img src="images/Junit5.svg" width="40" height="40">
+ <img src="images/Selenide.svg" width="40" height="40"> <img src="images/Selenoid.svg" width="40" height="40">
+ <img src="images/IDEA.svg" width="40" height="40"> <img src="images/GitHub.svg" width="40" height="40">
+ <img src="images/Jenkins.svg" width="40" height="40"> <img src="images/Allure Report.svg" width="40" height="40"> 
+ <img src="images/Allure TestOps.svg" width="40" height="40"> <img src="images/Jira_icon.png" width="40" height="40">
  <img src="images/Telegram.svg" width="40" height="40">
 
- `Gradle` `JUnit5` `Selenide` `Selenoid` `IDEA` `Github` `Jenkins` `Allure Report` `Allure TestOps` `Telegram`
+`Java` `Gradle` `Browserstack` `JUnit5` `Selenide` `Selenoid` `IDEA` `Github` `Jenkins` `Allure Report` `Allure TestOps` `Telegram`
 
 ### Параметры с помощью которых можно [запустить тесты](https://jenkins.autotests.cloud/job/raiffeisen-dmitryhli/build?delay=0sec):
 ![parameters](https://user-images.githubusercontent.com/48554235/132631901-704e82f9-03b7-4c50-b3ef-6bc68f9adeed.png)
@@ -65,4 +59,5 @@ allure serve build/allure-results
 <img src="images/Jira.png">
 
 ## Видео прохождение тестов из selenoid https://selenoid.autotests.cloud/#/
-![20fe4121f338fa7c](https://user-images.githubusercontent.com/48554235/125010873-12205580-e070-11eb-9585-6ee00cb2d2c3.gif)
+![0d6f346266bd9b031ad3168880297f7d](https://user-images.githubusercontent.com/48554235/132976900-e1093450-6eae-4d8b-937c-744f895080b1.gif)
+![1dc9bf86022b3904437bc3fb6e9f14316eaa2d13](https://user-images.githubusercontent.com/48554235/132976904-334f9332-231c-4754-91b7-f9ab92be566c.gif)
