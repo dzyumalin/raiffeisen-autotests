@@ -10,7 +10,28 @@
  <img src="images/Allure TestOps.svg" width="40" height="40"> <img src="images/Jira_icon.png" width="40" height="40">
  <img src="images/Telegram.svg" width="40" height="40">
 
-`Java` `Gradle` `Browserstack` `JUnit5` `Selenide` `Selenoid` `IDEA` `Github` `Jenkins` `Allure Report` `Allure TestOps` `Telegram`
+`Java` `Gradle` `Browserstack` `JUnit5` `Selenide` `Selenoid` `IDEA` `Github` `Jenkins` `Allure Report` `Allure TestOps` `Jira` `Telegram`
+
+UI
+* Тест на скачивание и проверку PDF файла
+* Проверка наличия заголовка на главной странице
+* Проверка наличия заголовка "Для ипотечных клиентов"
+* Проверка наличия заголовка "Ипотечные программы"
+* Проверка калькулятора ипотеки
+
+API
+* Авторизация
+* Ошибка авторизации
+* Создание пользователя
+* Получение и проверка списка пользователей
+* Получение и проверка пользователя
+* Получение и проверка года рождения в списке пользователей
+* Обновление информации о пользователе
+
+Mobile
+* Проверка формы авторизации
+* Проверка страницы приветствия
+* Поиск и проверка адреса банка
 
 ### Параметры с помощью которых можно [запустить тесты](https://jenkins.autotests.cloud/job/raiffeisen-dmitryhli/build?delay=0sec):
 ![parameters](https://user-images.githubusercontent.com/48554235/132631901-704e82f9-03b7-4c50-b3ef-6bc68f9adeed.png)
@@ -21,7 +42,8 @@
 * **BROWSER_SIZE** (web параметр)
 * **DEVICE** (mobile параметр)
 * **PLATFORM_VERSION** (mobile параметр)
-* **ALLURE_NOTIFICATIONS_VERSION** (По умолчанию 3.1.1)
+* **ALLURE_NOTIFICATIONS_VERSION** (По-умолчанию 3.1.1)
+* **THREADS** (По-умолчанию 1)
 
 ## Запуск тестов из терминала
 ### Запуск web тестов c localweb.properties / remoteweb.properties:
