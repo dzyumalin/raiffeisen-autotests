@@ -34,7 +34,7 @@ Mobile
 * Поиск и проверка адреса банка
 
 ### Параметры с помощью которых можно [запустить тесты](https://jenkins.autotests.cloud/job/raiffeisen-dmitryhli/build?delay=0sec):
-![parameters](https://user-images.githubusercontent.com/48554235/132631901-704e82f9-03b7-4c50-b3ef-6bc68f9adeed.png)
+![Screenshot 2021-09-12 at 17-14-08 Jenkins](https://user-images.githubusercontent.com/48554235/132991039-02ade48f-0d62-4da6-8733-25fd022634c3.png)
 * **TESTS_TAG** (web (для UI тестов), api (для API тестов) и mobile (для мобильных тестов))
 * **DEVICE_HOST** (remoteweb (для UI тестов) и browserstack (для мобильных тестов))
 * **BROWSER** (web параметр)
