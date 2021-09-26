@@ -90,11 +90,15 @@ gradle clean mobile -DdeviceHost=browserstack
 ```bash
 allure serve build/allure-results
 ```
-## Результат выполнения Allure Report в Jenkins
+## Allure Report
+### Пример автоматизированного тест кейса
 ![WEB](https://user-images.githubusercontent.com/48554235/132939526-6b5d28d4-e718-49d4-97c7-30ad250c8379.png)
 ## Allure TestOps
-<img src="images/testops1.png" width="45%"> <img src="images/testops2.png" width="45%">
-<img src="images/testops3.png" width="45%"> <img src="images/testops4.png" width="45%">
+### Пример автоматизированного тест кейса
+<img src="images/testops1.png"> 
+
+### Доска с аналитикой тестирования
+<img src="images/testops2.png">
 
 ## Оповещение о прохождении тестов в telegram
 (![R2D2](https://user-images.githubusercontent.com/48554235/132939853-f4ad636e-dd31-4a6b-87dd-29650e219612.png)
