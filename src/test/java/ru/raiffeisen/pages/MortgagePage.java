@@ -14,7 +14,6 @@ import static ru.raiffeisen.tests.TestData.*;
 
 public class MortgagePage {
 
-    // Selectors
     private SelenideElement mortGageMenu = $(".main-menu__link", 1),
             mortGageMemo = $(byText("Памятки для ипотечных клиентов")),
             mortGagePrograms = $(".e-title--h2"),
@@ -23,8 +22,6 @@ public class MortgagePage {
             mortGageNewBuilding = $(byText("Новостройка")),
             monthlyPayment = $(".fYZyZu");
 
-
-    // Methods
     public void setMortGageMenu() {
         mortGageMenu.click();
     }

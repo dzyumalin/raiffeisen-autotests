@@ -29,18 +29,12 @@ public class DepositContent extends TestBase {
     @DisplayName("Test on download and check PDF file")
     void checkPdfContent() {
         step("Open url " + OPEN_URL, () ->
-                contributionPage.checkAndOpenUrl());
-        step("Click in menu on 'Вклады'", () ->
-                contributionPage.clickOnContributionMenu());
-
-        step("Click on 'Вклад'", () ->
-                contributionPage.clickOnContribution());
-
-        step("Find block 'Документы'", () ->
-                contributionPage.checkContributionDocument());
-        step("Download document 'Условия и процентные ставки по срочному вкладу «Фиксированный»' и проверить", () -> {
-            contributionPage.selectContributionDownloadFile();
-        });
+                contributionPage.checkAndOpenUrl()
+        );
+        step("Click in menu on 'Вклады'", () -> contributionPage.clickOnContributionMenu());
+        step("Click on 'Вклад'", () -> contributionPage.clickOnContribution());
+        step("Find block 'Документы'", () -> contributionPage.checkContributionDocument());
+        step("Download document 'Условия и процентные ставки по срочному вкладу «Фиксированный»' и проверить", () -> contributionPage.selectContributionDownloadFile());
 
     }
 
