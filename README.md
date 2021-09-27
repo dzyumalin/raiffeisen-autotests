@@ -102,8 +102,11 @@ allure serve build/allure-results
 
 ### Доска с командой тестирования и аналитикой
 <img src="images/testops4.png">
+
 ## Оповещение о прохождении тестов в Telegram
+
 (![R2D2](https://user-images.githubusercontent.com/48554235/132939853-f4ad636e-dd31-4a6b-87dd-29650e219612.png)
+
 ## Интеграция с Jira
 <img src="images/Jira.png">
 
