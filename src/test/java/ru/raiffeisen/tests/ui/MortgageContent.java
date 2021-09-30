@@ -32,14 +32,11 @@ public class MortgageContent extends TestBase{
     @DisplayName("Checking mortage content")
     void checkForMortgageClients() {
         step("Open url " + OPEN_URL, () ->
-                mortgagePage.checkAndOpenUrl());
-        step("Click on 'Ипотека'", () ->
-                mortgagePage.setMortGageMenu());
-        step("Click on " + MORTGAGE_CLIENTS, () ->
-                mortgagePage.setMortGageMemo());
-        step("Check description " + MORTGAGE_CLIENTS, () -> {
-            mortgagePage.checkMortGageClients();
-        });
+                mortgagePage.checkAndOpenUrl()
+        );
+        step("Click on 'Ипотека'", () -> mortgagePage.setMortGageMenu());
+        step("Click on " + MORTGAGE_CLIENTS, () -> mortgagePage.setMortGageMemo());
+        step("Check description " + MORTGAGE_CLIENTS, () -> mortgagePage.checkMortGageClients());
     }
 
     @Test
@@ -49,7 +46,8 @@ public class MortgageContent extends TestBase{
     @DisplayName("Checking for the presence of a page title\n")
     void titleTest() {
         step("Open url " + OPEN_URL, () ->
-                mortgagePage.checkAndOpenUrl());
+                mortgagePage.checkAndOpenUrl()
+        );
         step("The page title should have 'Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги'", () -> {
             String expectedTitle = "Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги";
             String actualTitle = title();

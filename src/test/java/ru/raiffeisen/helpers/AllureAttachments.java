@@ -33,7 +33,7 @@ public class AllureAttachments {
     public static void addAttachments(String driver) {
         String sessionId;
         switch(driver) {
-            case "SelenoidDriver":
+            case "WebDriver":
                 sessionId = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
                 addScreenshotAs("Last screenshot");
                 addPageSource();

@@ -2,7 +2,7 @@ package ru.raiffeisen.tests;
 
 import com.codeborne.selenide.Configuration;
 import ru.raiffeisen.config.Project;
-import ru.raiffeisen.drivers.SelenoidDriver;
+import ru.raiffeisen.drivers.WebDriver;
 import ru.raiffeisen.helpers.AllureAttachments;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -18,8 +18,8 @@ public class TestBase {
     @BeforeAll
     public static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        if (Objects.equals(Project.deviceConfig.driver(), "SelenoidDriver")) {
-            SelenoidDriver.configure();
+        if (Objects.equals(Project.deviceConfig.driver(), "WebDriver")) {
+            WebDriver.configure();
             System.out.println(Project.deviceConfig.hubUrl());
         } else {
             Configuration.browser = "ru.raiffeisen.drivers." + Project.deviceConfig.driver();

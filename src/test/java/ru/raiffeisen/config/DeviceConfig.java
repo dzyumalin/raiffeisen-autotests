@@ -9,9 +9,6 @@ import org.aeonbits.owner.Config;
 })
 public interface DeviceConfig extends Config {
 
-    @Key("driver")
-    String driver();
-
     @Key("hub.url")
     String hubUrl();
 
@@ -33,7 +30,6 @@ public interface DeviceConfig extends Config {
     @Key("app.bs")
     String appBs();
 
-    @Key("device")
     String device();
 
     @Key("platform.name")
@@ -63,13 +59,9 @@ public interface DeviceConfig extends Config {
     @Key("selenoid.video.storage")
     String selenoidVideoStorage();
 
-    @Key("browser")
+    String driver();
     String browser();
-
-    @Key("browserVersion")
     String browserVersion();
-
-    @Key("browserSize")
     String browserSize();
 }
 

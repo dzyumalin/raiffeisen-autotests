@@ -4,7 +4,7 @@ import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import ru.raiffeisen.config.Project;
 
-public class SelenoidDriver {
+public class WebDriver {
 
     public static void configure() {
         Configuration.browserVersion = Project.deviceConfig.browserVersion();
