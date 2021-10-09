@@ -1,4 +1,4 @@
-package ru.raiffeisen.components;
+package ru.raiffeisen.pages.components;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;

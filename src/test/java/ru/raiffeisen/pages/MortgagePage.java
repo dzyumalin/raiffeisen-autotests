@@ -2,7 +2,7 @@ package ru.raiffeisen.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-import ru.raiffeisen.components.MortgageCalculator;
+import ru.raiffeisen.pages.components.MortgageCalculator;
 
 import java.util.Objects;
 

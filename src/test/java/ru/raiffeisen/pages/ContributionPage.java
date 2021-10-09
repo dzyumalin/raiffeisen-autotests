@@ -1,7 +1,7 @@
 package ru.raiffeisen.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import ru.raiffeisen.components.ContributionDownloadFile;
+import ru.raiffeisen.pages.components.ContributionDownloadFile;
 
 import java.io.IOException;
 

@@ -22,7 +22,6 @@ allure {
         version = allureVersion
     }
 }
-apply plugin: "io.qameta.allure"
 
 dependencies {
     testImplementation(
