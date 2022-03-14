@@ -59,9 +59,16 @@ public interface DeviceConfig extends Config {
     @Key("selenoid.video.storage")
     String selenoidVideoStorage();
 
+    @Key("driver")
     String driver();
+
+    @Key("browser")
     String browser();
+
+    @Key("browserVersion")
     String browserVersion();
+
+    @Key("browserSize")
     String browserSize();
 }
 

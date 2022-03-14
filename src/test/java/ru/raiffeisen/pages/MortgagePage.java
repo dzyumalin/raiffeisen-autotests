@@ -7,19 +7,20 @@ import ru.raiffeisen.pages.components.MortgageCalculator;
 import java.util.Objects;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selectors.byTitle;
+import static com.codeborne.selenide.Selenide.*;
 import static ru.raiffeisen.tests.TestData.*;
 
 public class MortgagePage {
 
-    private SelenideElement mortGageMenu = $(".main-menu__link", 1),
-            mortGageMemo = $(byText("Памятки для ипотечных клиентов")),
+    private SelenideElement mortGageMenu = $$(".Headerstyles__HeaderBox-sc-1148tul-2").findBy(visible).$(byText("Ипотека")),
+            mortGageMemo = $$("[data-marker='Columns.ColumnsWrapper']").findBy(visible).$(byText("Памятки для ипотечных клиентов")),
             mortGagePrograms = $(".e-title--h2"),
             mortGageClients = $(".e-title--h2"),
-            mortGageAllPrograms = $(byText("Все программы")),
-            mortGageNewBuilding = $(byText("Новостройка")),
+            mortGageAllPrograms = $$("[data-marker='Submenu.SubmenuWrapper']").findBy(visible).$(byText("Все ипотечные программы")),
+            mortGageNewBuilding = $$("[data-marker='Columns.ColumnsWrapper']").findBy(visible).$(byText("Новостройка")),
             monthlyPayment = $(".fYZyZu");
 
     public void setMortGageMenu() {

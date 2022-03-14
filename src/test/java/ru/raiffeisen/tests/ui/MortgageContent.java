@@ -48,8 +48,8 @@ public class MortgageContent extends TestBase{
         step("Open url " + OPEN_URL, () ->
                 mortgagePage.checkAndOpenUrl()
         );
-        step("The page title should have 'Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги'", () -> {
-            String expectedTitle = "Райффайзенбанк – банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги";
+        step("The page title should have 'Райффайзен Банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги'", () -> {
+            String expectedTitle = "Райффайзен Банк для жизни и бизнеса. Ипотека, кредиты, банковские карты и другие услуги";
             String actualTitle = title();
 
             assertThat(actualTitle).isEqualTo(expectedTitle);
